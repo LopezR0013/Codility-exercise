@@ -1,0 +1,36 @@
+
+class Solution {
+    public int[] solution(int[] A, int K) {
+		
+		if( A.length == 0) {
+			return A;
+		}
+        // write your code in Java SE 8
+		if (K >= A.length) {
+			
+		
+			K = K % A.length;
+		}
+        
+        while ( K > 0){
+            
+            //Grabbing the last value
+            int lastInt = A[A.length - 1];
+            
+           
+            for (int i = A.length -1; i>0; i--){
+                
+                //swap values
+                A[i] = A[i-1];
+                
+            }
+            
+            //Puting the last value in the first place
+            A[0] = lastInt;
+            K--;
+        }
+        
+        return A;
+    }
+}
+

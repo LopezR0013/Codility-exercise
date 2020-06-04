@@ -1,0 +1,12 @@
+class Solution {
+    public int solution(int X, int Y, int D) {
+        // write your code in Java SE 8
+        Y = Y - X;
+        X = Y / D;
+        if (Y%D==0){
+            return X;
+        }
+        
+        return X + 1;
+    }
+}
